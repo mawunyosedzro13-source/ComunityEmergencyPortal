@@ -1,0 +1,249 @@
+/* ===== Community Emergency Information Portal ===== */
+/* Basic, plain CSS — no frameworks, easy to read and explain */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f5f6f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  background-color: #b3202c; /* emergency red */
+  color: #fff;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #fff;
+  color: #b3202c;
+  font-weight: bold;
+}
+
+/* ---------- Hero Section (Home page) ---------- */
+.hero {
+  background-color: #16324f; /* deep emergency blue */
+  color: #fff;
+  text-align: center;
+  padding: 60px 5%;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #b3202c;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 6px;
+}
+
+.btn:hover {
+  background-color: #8f1922;
+}
+
+.btn.secondary {
+  background-color: #fff;
+  color: #16324f;
+}
+
+.btn.secondary:hover {
+  background-color: #e2e2e2;
+}
+
+/* ---------- Alert Banner ---------- */
+.alert-banner {
+  background-color: #ffd60a;
+  color: #222;
+  text-align: center;
+  padding: 10px 5%;
+  font-weight: bold;
+}
+
+/* ---------- Main content wrapper ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 5%;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #16324f;
+  border-bottom: 3px solid #b3202c;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #b3202c;
+  margin-bottom: 8px;
+}
+
+/* ---------- Cards (used on Home, Contacts, Hospitals etc.) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 5px solid #b3202c;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+.card .number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #16324f;
+}
+
+/* ---------- Tables (Hospitals, Police & Fire) ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+table caption {
+  text-align: left;
+  font-weight: bold;
+  color: #16324f;
+  margin-bottom: 8px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #16324f;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f6f8;
+}
+
+/* ---------- Tips lists (First Aid, Safety Tips) ---------- */
+.tip-box {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tip-box ol,
+.tip-box ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.tip-box li {
+  margin-bottom: 6px;
+}
+
+.warning {
+  background-color: #fff4e5;
+  border-left: 5px solid #ff9800;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* ---------- About page ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #16324f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 5%;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ffd60a;
+}
